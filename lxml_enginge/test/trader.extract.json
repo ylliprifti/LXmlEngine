@@ -1,0 +1,22 @@
+{
+    "doc": "https://www.checkatrade.com/trades/WayreHouseElectricalServices",
+    "data": {
+        "ld_data": "//head/script[@type=\"application/ld+json\"][1]",
+        "reviews": [{
+            "doc": "https://www.checkatrade.com/trades/WayreHouseElectricalServices/reviews",
+            "__basepath": "//div[contains(@class, 'ReviewsPage__Content')]//div[contains(@class, 'ReviewsItem__Wrapper')]",
+            "__key": "review",
+            "title": "//h3[contains(@class, 'ReviewsItem__Title')]",
+            "score": "//*[name()='svg']//text()[normalize-space()]",
+            "verified": "//div[contains(@class, 'ReviewsItem__Verified')]/text()[normalize-space()]",
+            "content": "//p[contains(@class, 'ReviewsItem__P')]",
+            "review_by": "//div[contains(@class, 'ReviewsItem__Byline')]/text()[normalize-space()]",
+            "review_details": {
+              "workmanship": "//div[contains(@class, 'Score__Wrapper')][1]/div[2]/text()",
+              "reliability": "//div[contains(@class, 'Score__Wrapper')][2]/div[2]/text()",
+              "tidiness": "//div[contains(@class, 'Score__Wrapper')][3]/div[2]/text()",
+              "courtesy": "//div[contains(@class, 'Score__Wrapper')][4]/div[2]/text()"
+            }
+        }]
+    }
+}
