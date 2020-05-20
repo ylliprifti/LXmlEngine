@@ -1,6 +1,4 @@
-from typing import Dict, Any
-
-from bin.lxml_enginge.interfaces.Engine import Engine
+from lxml_enginge.interfaces.Engine import Engine
 from interface import implements
 from lxml import html, etree
 import requests
@@ -14,19 +12,19 @@ log = logging.getLogger('XPathEngine')
 sys.setrecursionlimit(1000)
 
 
-class XPathEngine(implements(Engine)):
+class LXmlEngine(implements(Engine)):
 
     def process(self, process_tree: dict) -> dict:
         if 'doc' not in process_tree.keys():
             log.info("XPathEngine::process -> doc was none")
             return None
-        return XPathEngine.__process(process_tree, XPathEngine.__get_element(process_tree['doc']))
+        return LXmlEngine.__process(process_tree, LXmlEngine.__get_element(process_tree['doc']))
 
     @staticmethod
     def __process(process_tree, html_element) -> dict:
         result = dict()
 
-        process_tree = XPathEngine.__filter_process_tree(process_tree)
+        process_tree = LXmlEngine.__filter_process_tree(process_tree)
         log.info("XPathEngine::__process -> process_tree: {}".format(process_tree))
 
         for key, value in process_tree.items():
@@ -35,12 +33,12 @@ class XPathEngine(implements(Engine)):
             log.info("XPathEngine::__process -> value type {}".format(type_value))
 
             if type_value == str:
-                result.update(XPathEngine.__process_item(key, value, html_element))
+                result.update(LXmlEngine.__process_item(key, value, html_element))
             if type_value == list:
-                temp_return = XPathEngine.__process_array(key, value[0], html_element)
+                temp_return = LXmlEngine.__process_array(key, value[0], html_element)
                 result.update({key: temp_return})
             if type_value == dict:
-                result.update({key: XPathEngine.__process(value, html_element)})
+                result.update({key: LXmlEngine.__process(value, html_element)})
 
         log.info("XPathEngine::__process -> result {}".format(result))
         return result
@@ -65,7 +63,7 @@ class XPathEngine(implements(Engine)):
 
         if 'doc' in value.keys():
             log.info("XPathEngine::__process_array -> doc {}".format(value['doc']))
-            html_element = XPathEngine.__get_element(value['doc'])
+            html_element = LXmlEngine.__get_element(value['doc'])
 
         selector = html_element.xpath(xpath)
 
@@ -76,7 +74,7 @@ class XPathEngine(implements(Engine)):
         for item in selector:
             log.info("XPathEngine::__process_array -> selector.item {}".format(item))
             temp_elem = html.fromstring(etree.tostring(item, pretty_print=True))
-            result.append({key: XPathEngine.__process(value, temp_elem)})
+            result.append({key: LXmlEngine.__process(value, temp_elem)})
 
         log.info("XPathEngine::__process_array -> return result {}".format(result))
         return result

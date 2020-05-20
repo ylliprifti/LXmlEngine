@@ -4,13 +4,13 @@ import pytest
 
 @pytest.fixture
 def config_reader():
-    return JsonConfigReader("/Users/ylliprifti/OneDrive/Dev/data-gather/bin/lxml_enginge/test/trader.extract.json")
+    return JsonConfigReader("/Users/ylliprifti/OneDrive/Dev/data-gather/bin/web_engine/test/trader.extract.json")
 
 
 @pytest.fixture
 def ex_config_reader():
     with pytest.raises(Exception):
-        return JsonConfigReader("/Users/ylliprifti/OneDrive/Dev/data-gather/bin/lxml_enginge/test/NOFILE")
+        return JsonConfigReader("/Users/ylliprifti/OneDrive/Dev/data-gather/bin/web_engine/test/NOFILE")
 
 
 def test_reader(config_reader):

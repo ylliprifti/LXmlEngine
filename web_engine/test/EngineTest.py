@@ -5,7 +5,7 @@ import pytest
 
 @pytest.fixture
 def config_reader():
-    return JsonConfigReader("/Users/ylliprifti/OneDrive/Dev/data-gather/bin/lxml_enginge/test/trader.extract.json")
+    return JsonConfigReader("/Users/ylliprifti/OneDrive/Dev/data-gather/bin/web_engine/test/trader.extract.json")
 
 
 @pytest.fixture()

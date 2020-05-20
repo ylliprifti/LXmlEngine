@@ -1,5 +1,4 @@
-from bin.lxml_enginge.interfaces.ConfigReader import ConfigReader
-
+from web_engine.interfaces.ConfigReader import ConfigReader
 from interface import implements
 import os
 import json
@@ -7,7 +6,7 @@ import json
 
 class JsonConfigReader(implements(ConfigReader)):
 
-    def __init__(self, json_file_path:str):
+    def __init__(self, json_file_path: str):
         if not os.path.exists(json_file_path):
             raise Exception("File {} not found".format(json_file_path))
 

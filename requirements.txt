@@ -1,0 +1,7 @@
+lxml==4.5.0
+python-interface==1.6.0
+
+requests~=2.23.0
+pytest~=5.4.2
+selenium~=3.141.0
+setuptools~=46.4.0
