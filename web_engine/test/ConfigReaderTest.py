@@ -1,10 +1,11 @@
-from bin.lxml_enginge.engine.JsonConfigReader import JsonConfigReader
+from web_engine.engine.JsonConfigReader import JsonConfigReader
 import pytest
 
 
 @pytest.fixture
 def config_reader():
-    return JsonConfigReader("/Users/ylliprifti/OneDrive/Dev/data-gather/bin/web_engine/test/trader.extract.json")
+    return JsonConfigReader("/Users/ylliprifti/OneDrive/Dev/open-source/dr-web-engine/web_engine/test/trader.extract"
+                            ".json")
 
 
 @pytest.fixture
