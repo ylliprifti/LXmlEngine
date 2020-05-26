@@ -1,5 +1,5 @@
-from web_engine.engine.JsonConfigReader import JsonConfigReader
-from web_engine.engine.ScrapEngine import ScrapEngine
+from web_engine.engine.JsonQuery import JsonConfigReader
+from web_engine.engine.CoreEngine import CoreEngine
 
 from pprint import pprint as pp
 
@@ -14,11 +14,11 @@ def config_reader():
 
 @pytest.fixture()
 def engine():
-    return ScrapEngine()
+    return CoreEngine()
 
 
 def test_main_process(config_reader, engine):
-    result = engine.process(config_reader.read())
+    result = engine.process(config_reader.load())
     pp(result)
     assert result is not None and result["data"] is not None
 

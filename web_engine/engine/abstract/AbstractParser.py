@@ -1,21 +1,36 @@
 from web_engine.interfaces.Parser import Parser
+from web_engine.interfaces.Scraper import Scraper
 
 from interface import implements
 from lxml import html, etree
 import requests
 from urllib.parse import urljoin
 
+import logging
+
 
 class AbstractParser(implements(Parser)):
 
-    def __init__(self):
+    def __init__(self, scraper: Scraper, log: logging = None):
+        self.log = log
         self.last_tree: etree = None
-        self.last_element: html = None
+        self.last_element: html.HtmlElement = None
         self.last_inner_element = None
         self.last_items: list = None
         self.last_url: str = None
+        self.scraper = scraper
+
+    def get_doc_element(self, doc):
+        '''
+        get the html element from the url [doc]
+        :param doc: the url to the page
+        :return: html.from string content
+        '''
+        return self.scraper.get_doc(doc)
 
     def get_items(self, value: str, html_element) -> list:
+        if type(html_element) is str:
+            html_element = html.fromstring(html_element)
         xpath_result = html_element.xpath(value)
         result = list()
         for x in xpath_result:
@@ -27,18 +42,9 @@ class AbstractParser(implements(Parser)):
         self.last_items = result
         return self.last_items
 
-    def get_doc_element(self, doc):
-        '''
-        get the html element from the url [doc]
-        :param doc: the url to the page
-        :return: html.from string content
-        '''
-        with requests.get(doc) as page:
-            self.last_url = doc
-            self.last_tree: etree = html.fromstring(page.content)
-            return self.last_tree
-
     def get_element(self, html_element, xpath):
+        if type(html_element) is str:
+            html_element = html.fromstring(html_element)
         self.last_element = html_element.xpath(xpath)
         return self.last_element
 
@@ -50,6 +56,10 @@ class AbstractParser(implements(Parser)):
         return urljoin(self.last_url, url)
 
     def get_doc_element_by_actions(self, actions: list):
-        raise Exception("LXML Parser does not support actions. Consider using Selenium Parser.")
+        return self.scraper.action_get(actions)
+
+    def get_doc_element_by_filter(self, filters: list):
+        return self.scraper.filter_get(filters)
+
 
 

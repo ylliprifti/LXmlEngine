@@ -1,14 +1,15 @@
 {
-    "doc": "https://www.checkatrade.com/trades/WayreHouseElectricalServices",
+    "_doc": "https://www.checkatrade.com/trades/WayreHouseElectricalServices",
     "data": {
         "ld_data": "//head/script[@type=\"application/ld+json\"][1]"
     },
     "reviews": [{
-            "doc": "https://www.checkatrade.com/trades/WayreHouseElectricalServices/reviews",
-            "__base_path": "//div[contains(@class, 'ReviewsPage__Content')]//div[contains(@class, 'ReviewsItem__Wrapper')]",
-            "__key": "review",
-            "__follow": "//a[contains(@class,\"Chevrons__Wrapper\")][2]/@href",
-            "__follow_action": "//a[contains(@class,\"Chevrons__Wrapper\")][2]{click }",
+            "_doc": "https://www.checkatrade.com/trades/WayreHouseElectricalServices/reviews",
+            "_base_path": "//div[contains(@class, 'ReviewsPage__Content')]//div[contains(@class, 'ReviewsItem__Wrapper')]",
+            "_key": "review",
+            "_pre_remove": "//*[contains(@class,'alert-box')]",
+            "_follow": "//a[contains(@class,\"Chevrons__Wrapper\")][2]/@href",
+            "_follow_action": "//a[contains(@class,\"Chevrons__Wrapper\")][2]{click }",
             "title": "//h3[contains(@class, 'ReviewsItem__Title')]",
             "score": "//*[name()='svg']//text()[normalize-space()]",
             "verified": "//div[contains(@class, 'ReviewsItem__Verified')]/text()[normalize-space()]",

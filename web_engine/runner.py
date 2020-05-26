@@ -1,7 +1,8 @@
-from web_engine.engine.JsonConfigReader import JsonConfigReader
-from web_engine.engine.ScrapEngine import ScrapEngine
+from web_engine.engine.JsonQuery import JsonQuery
+from web_engine.engine.CoreEngine import CoreEngine
 from web_engine.engine.LxmlParser import LxmlParser
-from web_engine.engine.SeleniumParser import SeleniumParser
+from web_engine.engine.SeleniumScraper import SeleniumScraper
+from web_engine.engine.RequestScraper import RequestScraper
 
 from pprint import pprint as pp
 
@@ -35,29 +36,35 @@ def main(argv):
     if args.log:
         log_level = logging.NOTSET
 
+    logging.basicConfig(level=log_level)
+    log = logging.getLogger('Engine')
+
     if args.query is None:
         parser.print_help()
         return
 
-    conf = JsonConfigReader(args.query)
+    query = JsonQuery(json_query_path=args.query)
 
-    engine_parser = SeleniumParser()
+    scraper = SeleniumScraper(log)
     if args.engine == 'lxml':
-        engine_parser = LxmlParser()
+        scraper = RequestScraper(log)
 
-    engine = ScrapEngine(log_level=log_level, parser=engine_parser)
+    html_parser = LxmlParser(scraper, log)
 
-    query: dict = conf.read()
-    result = engine.process(query)
-    print(json.dumps(result))
+    engine = CoreEngine(html_parser, query, log)
+
+    result = engine.process()
+
+    pp(result)
+    # print(json.dumps(result))
 
 
 if __name__ == "__main__":
     sys.argv.append("-q")
     sys.argv.append("/Users/ylliprifti/OneDrive/Dev/open-source/dr-web-engine/web_engine/test/trader.extract.json")
 
-    # sys.argv.append("-l")
-    # sys.argv.append("true")
+    sys.argv.append("-l")
+    sys.argv.append("true")
 
     sys.argv.append("-e")
     sys.argv.append("selenium")

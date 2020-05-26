@@ -2,6 +2,10 @@ from interface import Interface
 
 
 class Parser(Interface):
+    """
+    Implement this interface to support multiple parsing methods for example XPath and DOM and/or to use different
+    parsing engines
+    """
 
     def get_doc_element(self, doc):
         pass
@@ -19,4 +23,7 @@ class Parser(Interface):
         pass
 
     def get_doc_element_by_actions(self, actions: list):
+        pass
+
+    def get_doc_element_by_filter(self, filters: list):
         pass

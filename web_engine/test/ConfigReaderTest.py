@@ -1,4 +1,4 @@
-from web_engine.engine.JsonConfigReader import JsonConfigReader
+from web_engine.engine.JsonQuery import JsonConfigReader
 import pytest
 
 
@@ -15,7 +15,7 @@ def ex_config_reader():
 
 
 def test_reader(config_reader):
-    assert len(config_reader.read()["doc"]) > 10
+    assert len(config_reader.load()["doc"]) > 10
 
 
 def test_no_file_reader(ex_config_reader):
