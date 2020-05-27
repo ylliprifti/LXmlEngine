@@ -31,6 +31,8 @@ class AbstractParser(implements(Parser)):
     def get_items(self, value: str, html_element) -> list:
         if type(html_element) is str:
             html_element = html.fromstring(html_element)
+        if type(html_element) is bytes:
+            html_element = html.fromstring(html_element.decode("utf-8"))
         xpath_result = html_element.xpath(value)
         result = list()
         for x in xpath_result:

@@ -67,3 +67,8 @@ class JsonQuery(implements(Query)):
     @property
     def pre_filters(self) -> list:
         return [{key: value} for key, value in self.__data.items() if key.startswith('_pre_')]
+        # result = list()
+        # for key, value in self.__data.items():
+        #     if key.startswith('_pre_'):
+        #         result.append({key: value})
+        # return result

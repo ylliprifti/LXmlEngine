@@ -2,6 +2,7 @@ from web_engine.interfaces.Scraper import Scraper
 from web_engine.interfaces.ActionRunner import ActionRunner
 from web_engine.engine.actions.ClickAction import ClickAction
 from web_engine.engine.actions.FilterRemoveAction import FilterRemoveAction
+from web_engine.engine.config.ScraperConfig import ScraperConfig
 
 from interface import implements
 import time
@@ -9,18 +10,25 @@ import re
 from urllib.parse import urljoin
 
 from selenium import webdriver
+from xvfbwrapper import Xvfb
 
 
 class SeleniumScraper(implements(Scraper, ActionRunner)):
 
-    def __init__(self, log):
+    def __init__(self, log, config: ScraperConfig):
         self.log = log
+        self.config = config
         firefox_profile = webdriver.FirefoxProfile()
-        firefox_profile.set_preference('permissions.default.image', 2)
+        firefox_profile.set_preference('permissions.default.image', self.config.img.get())
         firefox_profile.set_preference('dom.ipc.plugins.enabled.libflashplayer.so', 'false')
 
+        if self.config.xvfb.get():
+            self.display = Xvfb()
+            self.display.start()
+
         self._driver = webdriver.Firefox(firefox_profile)
-        self._driver.set_window_size(800, 600)
+        self._driver.set_window_size(self.config.width.get(), self.config.height.get())
+        self._driver.set_window_position(self.config.lat.get() or 0, self.config.lon.get() or 0)
         self.last_url = None
         self.last_page = None
         self._actions = {}
@@ -101,6 +109,8 @@ class SeleniumScraper(implements(Scraper, ActionRunner)):
         if self.driver is not None:
             try:
                 self.driver.close()
+                if self.config.xvfb.get():
+                    self.display.stop()
             except Exception as ex:
                 self.log.error(ex)
                 pass
