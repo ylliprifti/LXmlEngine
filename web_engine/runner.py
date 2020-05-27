@@ -96,11 +96,11 @@ def main(argv):
 
 if __name__ == "__main__":
 
-    sys.argv.append("-q")
-    sys.argv.append("/Users/ylliprifti/OneDrive/Dev/open-source/dr-web-engine/web_engine/test/trader.extract.json")
-
-    sys.argv.append("-l")
-    sys.argv.append("true")
+    # sys.argv.append("-q")
+    # sys.argv.append("/Users/ylliprifti/OneDrive/Dev/open-source/dr-web-engine/web_engine/test/trader.extract.json")
+    #
+    # sys.argv.append("-l")
+    # sys.argv.append("true")
 
     # sys.argv.append("-wh")
     # sys.argv.append("640")
@@ -114,11 +114,11 @@ if __name__ == "__main__":
     # sys.argv.append("-lat")
     # sys.argv.append("20")
 
-    sys.argv.append("-img")
-    sys.argv.append("True")
-
-    sys.argv.append("-e")
-    sys.argv.append("selenium")
+    # sys.argv.append("-img")
+    # sys.argv.append("True")
+    #
+    # sys.argv.append("-e")
+    # sys.argv.append("selenium")
 
     main(sys.argv)
 
