@@ -1,3 +1,5 @@
+#! /usr/local/bin/python3
+
 from web_engine.engine.JsonQuery import JsonQuery
 from web_engine.engine.CoreEngine import CoreEngine
 from web_engine.engine.LxmlParser import LxmlParser
