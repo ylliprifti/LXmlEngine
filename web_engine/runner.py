@@ -1,4 +1,4 @@
-#! /usr/local/bin/python3
+#!/usr/local/bin/python3
 
 from web_engine.engine.JsonQuery import JsonQuery
 from web_engine.engine.CoreEngine import CoreEngine
@@ -10,9 +10,9 @@ from web_engine.engine.config.ScraperConfig import ScraperConfig
 from pprint import pprint as pp
 
 import argparse
-import sys
 import logging
 import json
+import sys
 
 
 parser = argparse.ArgumentParser(description='Web Scrap Engine for semi-structured web data retrieval using JSON '
@@ -98,29 +98,29 @@ def main(argv):
 
 if __name__ == "__main__":
 
-    # sys.argv.append("-q")
-    # sys.argv.append("/Users/ylliprifti/OneDrive/Dev/open-source/dr-web-engine/web_engine/test/trader.extract.json")
-    #
-    # sys.argv.append("-l")
-    # sys.argv.append("true")
+    sys.argv.append("-q")
+    sys.argv.append("../test.json")
+
+    sys.argv.append("-l")
+    sys.argv.append("true")
 
     # sys.argv.append("-wh")
     # sys.argv.append("640")
-
+    #
     # sys.argv.append("-ht")
     # sys.argv.append("640")
 
     # sys.argv.append("-lon")
     # sys.argv.append("20")
-
+    #
     # sys.argv.append("-lat")
     # sys.argv.append("20")
-
+    #
     # sys.argv.append("-img")
     # sys.argv.append("True")
-    #
-    # sys.argv.append("-e")
-    # sys.argv.append("selenium")
+
+    sys.argv.append("-e")
+    sys.argv.append("selenium")
 
     main(sys.argv)
 

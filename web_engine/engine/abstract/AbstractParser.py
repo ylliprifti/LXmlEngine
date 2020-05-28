@@ -47,6 +47,8 @@ class AbstractParser(implements(Parser)):
     def get_element(self, html_element, xpath):
         if type(html_element) is str:
             html_element = html.fromstring(html_element)
+        if type(html_element) is bytes:
+            html_element = html.fromstring(html_element.decode("latin1"))
         self.last_element = html_element.xpath(xpath)
         return self.last_element
 

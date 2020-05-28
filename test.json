@@ -1,0 +1,9 @@
+{
+    "_doc":"https://www.google.com/search?q=Ylli+Prifti",
+    "links":[{
+        "_base_path": "//div[@id='search'][1]//div[@class='g']",
+        "_follow": "//a[@id='pnnext'][1]/@href",
+        "link": "//div[@class='rc']/div[@class='r']/a/@href",
+        "title": "//h3/text()"
+    }]
+}

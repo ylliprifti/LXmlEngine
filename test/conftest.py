@@ -15,6 +15,15 @@ def config_reader():
 
 
 @pytest.fixture
+def simple_config():
+    json_query = {
+        "_doc": "https://www.checkatrade.com/trades/WayreHouseElectricalServices",
+        "h1": "//h1/text()"
+    }
+    return JsonQuery(json_query=json_query)
+
+
+@pytest.fixture
 def dict_config_reader():
     """JsonQuery loaded from dictionary"""
     json_query = {

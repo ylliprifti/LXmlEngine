@@ -45,7 +45,7 @@ class CoreEngine(implements(Engine)):
             if type_value == type(None):
                 break
             if type_value in [str, int, float, bool]:
-                result.update(self.__process_item(key, value, self.context))
+                result.update(self._process_item(key, value, self.context))
             if type_value == list:
                 if result.get(key) is None:
                     result[key] = list()
@@ -70,13 +70,14 @@ class CoreEngine(implements(Engine)):
         if len(pre_filters) > 0:
             html_element = self._apply_pre_filter(pre_filters)
 
-        if not inner_query.prop._base_path.get():
+        _base_path = inner_query.prop._base_path.get()
+        if not _base_path:
             self.log.warning("XPathEngine::_process_array -> _base_path was not present")
-            return result
+            _base_path = "//*"
+            # return result
 
-        xpath = inner_query.prop._base_path.get()
-        self.log.info("XPathEngine::_process_array -> xpath {}".format(xpath))
-        selector = self.parser.get_element(html_element, xpath)
+        self.log.info("XPathEngine::_process_array -> xpath {}".format(_base_path))
+        selector = self.parser.get_element(html_element, _base_path)
         if len(selector) == 0:
             self.log.warning("XPathEngine::_process_array -> selector length was 0")
             return result
@@ -112,7 +113,7 @@ class CoreEngine(implements(Engine)):
         self.log.info("XPathEngine::__process_array -> return result {}".format(result))
         return result
 
-    def __process_item(self, key, value, html_element):
+    def _process_item(self, key, value, html_element):
 
         self.log.info("XPathEngine::__process_item -> input key,value {}".format(key, value))
 

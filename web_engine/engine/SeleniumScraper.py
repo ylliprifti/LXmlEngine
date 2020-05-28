@@ -108,6 +108,7 @@ class SeleniumScraper(implements(Scraper, ActionRunner)):
     def __del__(self):
         if self.driver is not None:
             try:
+                time.sleep(10)  # wait for operations to complete before closing
                 self.driver.close()
                 if self.config.xvfb.get():
                     self.display.stop()
