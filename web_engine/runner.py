@@ -99,7 +99,7 @@ def main(argv):
 if __name__ == "__main__":
 
     # sys.argv.append("-q")
-    # sys.argv.append("../test.json")
+    # sys.argv.append("../google-search.json")
 
     # sys.argv.append("-l")
     # sys.argv.append("true")

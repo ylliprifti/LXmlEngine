@@ -1,0 +1,10 @@
+{
+  "_doc": "https://www.facebook.com/ylli.prifti/friends",
+  "friends": {
+    "_base_path": "//*[@id=\"mount_0_0\"]/div/div/div[3]/div/div/div[1]/div/div/div/div[4]/div/div/div/div/div/div[3]",
+    "_key": "friend",
+    "_pre_actions": "{scroll [direction=down, max=100] }"
+
+  }
+
+}

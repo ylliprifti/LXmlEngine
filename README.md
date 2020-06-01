@@ -78,24 +78,23 @@ For example, to run the web data retrieval with the following JSON query (suppos
 }
 ```
 
-use the following command: `python3 -m web_engine.runner -q test.json`. The outcome will like like the following JSON result: 
+use the following command: `python3 -m web_engine.runner -q test.json`. The outcome will look like the following JSON result: 
 
-```json
+```json5
 
-{'links': [{'link': ['https://en.wikipedia.org/wiki/Donald_Duck'],
-            'title': ['Donald Duck - Wikipedia']},
-           {'link': ['https://cosleyzoo.org/white-pekin-duck/'],
-            'title': ['White Pekin Duck – Cosley Zoo']},
-           {'link': ['https://www.cheatsheet.com/entertainment/donald-duck-turned-85-years-old.html/'],
-            'title': ['Donald Duck Turned 85-Years-Old and Disney Fans Are '
-                      'Quacking ...']},
-           {'link': ['https://en.wikipedia.org/wiki/Daisy_Duck'],
-            'title': ['Daisy Duck - Wikipedia']},
-           {'link': ['https://www.headstuff.org/culture/history/disney-studios-war-story-donald-duck-became-sgt/'],
-            'title': ['Disney Studios At War - the story of how Donald Duck '
-                      'became a Sgt ...']},
-...
-
+{"links": [{"link": ["https://en.wikipedia.org/wiki/Donald_Duck"], 
+           "title": ["Donald Duck - Wikipedia"]},
+           {"link": ["https://cosleyzoo.org/white-pekin-duck/"],
+            "title": ["White Pekin Duck – Cosley Zoo"]},
+           {"link": ["https://www.cheatsheet.com/entertainment/donald-duck-turned-85-years-old.html/"],
+            "title": ["Donald Duck Turned 85-Years-Old and Disney Fans Are Quacking ..."]},
+           {"link": ["https://en.wikipedia.org/wiki/Daisy_Duck"],
+            "title": ["Daisy Duck - Wikipedia"]},
+           {"link": ["https://www.headstuff.org/culture/history/disney-studios-war-story-donald-duck-became-sgt/"],
+            "title": ["Disney Studios At War - the story of how Donald Duck became a Sgt ..."]}
 
 ```
+
+
+
 
