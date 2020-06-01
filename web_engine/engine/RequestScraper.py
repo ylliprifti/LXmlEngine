@@ -3,7 +3,6 @@ from web_engine.interfaces.ActionRunner import ActionRunner
 
 from interface import implements
 import requests
-import time
 
 
 class RequestScraper(implements(Scraper, ActionRunner)):

@@ -1,5 +1,5 @@
 {
-    "_doc":"https://www.google.com/search?q=Ylli+Prifti",
+    "_doc":"https://www.google.com/search?q=Donald+Duck",
     "links":[{
         "_base_path": "//div[@id='search'][1]//div[@class='g']",
         "_follow": "//a[@id='pnnext'][1]/@href",

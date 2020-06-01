@@ -98,11 +98,11 @@ def main(argv):
 
 if __name__ == "__main__":
 
-    sys.argv.append("-q")
-    sys.argv.append("../test.json")
+    # sys.argv.append("-q")
+    # sys.argv.append("../test.json")
 
-    sys.argv.append("-l")
-    sys.argv.append("true")
+    # sys.argv.append("-l")
+    # sys.argv.append("true")
 
     # sys.argv.append("-wh")
     # sys.argv.append("640")
@@ -119,8 +119,8 @@ if __name__ == "__main__":
     # sys.argv.append("-img")
     # sys.argv.append("True")
 
-    sys.argv.append("-e")
-    sys.argv.append("selenium")
+    # sys.argv.append("-e")
+    # sys.argv.append("selenium")
 
     main(sys.argv)
 

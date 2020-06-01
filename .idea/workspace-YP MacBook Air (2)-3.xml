@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="64f44779-d55d-461e-b1a4-647348be5d2f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/web_engine/engine/RequestScraper.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web_engine/engine/SeleniumScraper.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web_engine/engine/actions/ClickAction.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web_engine/engine/actions/FilterRemoveAction.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web_engine/engine/actions/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web_engine/interfaces/Action.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web_engine/interfaces/ActionRunner.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web_engine/interfaces/Scraper.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web_engine/utils/ActionBuilder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web_engine/utils/JsonReader.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web_engine/utils/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/LXmlEngine.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LXmlEngine.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/R_User_Library.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/R_User_Library.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace-Ylli’s MacBook Pro.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace-Ylli’s MacBook Pro.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_engine/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_engine/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_engine/engine/JsonConfigReader.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_engine/engine/JsonQuery.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_engine/engine/ScrapEngine.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_engine/engine/CoreEngine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_engine/engine/SeleniumEngine.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_engine/engine/SeleniumParser.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_engine/engine/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_engine/engine/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_engine/engine/abstract/AbstractParser.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_engine/engine/abstract/AbstractParser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_engine/engine/abstract/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_engine/engine/abstract/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_engine/interfaces/ConfigReader.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_engine/interfaces/Query.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_engine/interfaces/Engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_engine/interfaces/Engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_engine/interfaces/Parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_engine/interfaces/Parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_engine/interfaces/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_engine/interfaces/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_engine/runner.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_engine/runner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_engine/test/ConfigReaderTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_engine/test/ConfigReaderTest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_engine/test/EngineTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_engine/test/EngineTest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_engine/test/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_engine/test/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_engine/test/temp.json" beforeDir="false" afterPath="$PROJECT_DIR$/web_engine/test/temp.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_engine/test/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_engine/test/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_engine/test/trader.extract.json" beforeDir="false" afterPath="$PROJECT_DIR$/web_engine/test/trader.extract.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1c8viA9DJHzsbZY6qVS6zhauJDQ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web_engine/engine/actions" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web_engine/engine/actions" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web_engine/engine" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.runner (2)">
+    <configuration name="runner (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="LXmlEngine" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lxml_engine" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lxml_engine/runner.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="runner (2)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="LXmlEngine" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/web_engine" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/web_engine/runner.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="LXmlEngine" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/web_engine/interpreter" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/web_engine/interpreter/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Nosetests for ConfigReaderTest.test_no_file_reader" type="tests" factoryName="Nosetests" temporary="true" nameIsGenerated="true">
+      <module name="LXmlEngine" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/web_engine/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;ConfigReaderTest.test_no_file_reader&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Nosetests for EngineTest.test_main_process" type="tests" factoryName="Nosetests" temporary="true" nameIsGenerated="true">
+      <module name="LXmlEngine" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/web_engine/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;EngineTest.test_main_process&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.runner (2)" />
+        <item itemvalue="Python.runner (1)" />
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python tests.Nosetests for ConfigReaderTest.test_no_file_reader" />
+        <item itemvalue="Python tests.Nosetests for EngineTest.test_main_process" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="64f44779-d55d-461e-b1a4-647348be5d2f" name="Default Changelist" comment="" />
+      <created>1589923159733</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1589923159733</updated>
+      <workItem from="1589923162871" duration="5119000" />
+      <workItem from="1589971693099" duration="19579000" />
+      <workItem from="1590013141432" duration="2797000" />
+      <workItem from="1590036779798" duration="61106000" />
+      <workItem from="1590294955582" duration="10591000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2221" y="235" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590157310893">
+      <screen x="1440" y="-11" width="1920" height="1057" />
+    </state>
+    <state x="2221" y="235" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.826/1440.-11.1920.1057@1440.-11.1920.1057" timestamp="1590157310893" />
+    <state x="392" y="69" key="CommitChangelistDialog2" timestamp="1590098617864">
+      <screen x="0" y="23" width="1680" height="976" />
+    </state>
+    <state x="392" y="69" key="CommitChangelistDialog2/0.23.1680.976@0.23.1680.976" timestamp="1590098617864" />
+    <state width="888" height="370" key="DebuggerActiveHint" timestamp="1590297324241">
+      <screen x="0" y="23" width="1440" height="837" />
+    </state>
+    <state width="962" height="466" key="DebuggerActiveHint/0.23.1440.826/1440.-11.1920.1057@1440.-11.1920.1057" timestamp="1590058429984" />
+    <state width="888" height="370" key="DebuggerActiveHint/0.23.1440.837@0.23.1440.837" timestamp="1590297324241" />
+    <state width="962" height="444" key="DebuggerActiveHint/0.23.1440.877/1440.-11.1920.1006@1440.-11.1920.1006" timestamp="1590068426564" />
+    <state width="1038" height="432" key="DebuggerActiveHint/0.23.1680.976@0.23.1680.976" timestamp="1590274354962" />
+    <state x="508" y="198" key="FileChooserDialogImpl" timestamp="1590013280365">
+      <screen x="0" y="23" width="1440" height="837" />
+    </state>
+    <state x="508" y="198" key="FileChooserDialogImpl/0.23.1440.837@0.23.1440.837" timestamp="1590013280365" />
+    <state width="1358" height="204" key="GridCell.Tab.0.bottom" timestamp="1590360719642">
+      <screen x="0" y="23" width="1440" height="837" />
+    </state>
+    <state width="1011" height="361" key="GridCell.Tab.0.bottom/0.23.1440.826/1440.-11.1920.1057@1440.-11.1920.1057" timestamp="1590145448406" />
+    <state width="1358" height="204" key="GridCell.Tab.0.bottom/0.23.1440.837@0.23.1440.837" timestamp="1590360719642" />
+    <state width="991" height="265" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.-11.1920.1006@1440.-11.1920.1006" timestamp="1590068233041" />
+    <state width="927" height="265" key="GridCell.Tab.0.bottom/0.23.1680.976@0.23.1680.976" timestamp="1590274644860" />
+    <state width="1358" height="204" key="GridCell.Tab.0.center" timestamp="1590360719634">
+      <screen x="0" y="23" width="1440" height="837" />
+    </state>
+    <state width="1011" height="361" key="GridCell.Tab.0.center/0.23.1440.826/1440.-11.1920.1057@1440.-11.1920.1057" timestamp="1590145448405" />
+    <state width="1358" height="204" key="GridCell.Tab.0.center/0.23.1440.837@0.23.1440.837" timestamp="1590360719634" />
+    <state width="991" height="265" key="GridCell.Tab.0.center/0.23.1440.877/1440.-11.1920.1006@1440.-11.1920.1006" timestamp="1590068233034" />
+    <state width="927" height="265" key="GridCell.Tab.0.center/0.23.1680.976@0.23.1680.976" timestamp="1590274644859" />
+    <state width="1358" height="204" key="GridCell.Tab.0.left" timestamp="1590360719629">
+      <screen x="0" y="23" width="1440" height="837" />
+    </state>
+    <state width="1011" height="361" key="GridCell.Tab.0.left/0.23.1440.826/1440.-11.1920.1057@1440.-11.1920.1057" timestamp="1590145448405" />
+    <state width="1358" height="204" key="GridCell.Tab.0.left/0.23.1440.837@0.23.1440.837" timestamp="1590360719629" />
+    <state width="991" height="265" key="GridCell.Tab.0.left/0.23.1440.877/1440.-11.1920.1006@1440.-11.1920.1006" timestamp="1590068233033" />
+    <state width="927" height="265" key="GridCell.Tab.0.left/0.23.1680.976@0.23.1680.976" timestamp="1590274644857" />
+    <state width="1358" height="204" key="GridCell.Tab.0.right" timestamp="1590360719640">
+      <screen x="0" y="23" width="1440" height="837" />
+    </state>
+    <state width="1011" height="361" key="GridCell.Tab.0.right/0.23.1440.826/1440.-11.1920.1057@1440.-11.1920.1057" timestamp="1590145448405" />
+    <state width="1358" height="204" key="GridCell.Tab.0.right/0.23.1440.837@0.23.1440.837" timestamp="1590360719640" />
+    <state width="991" height="265" key="GridCell.Tab.0.right/0.23.1440.877/1440.-11.1920.1006@1440.-11.1920.1006" timestamp="1590068233034" />
+    <state width="927" height="265" key="GridCell.Tab.0.right/0.23.1680.976@0.23.1680.976" timestamp="1590274644859" />
+    <state width="1358" height="386" key="GridCell.Tab.1.bottom" timestamp="1590360277896">
+      <screen x="0" y="23" width="1440" height="837" />
+    </state>
+    <state width="993" height="265" key="GridCell.Tab.1.bottom/0.23.1440.826/1440.-11.1920.1057@1440.-11.1920.1057" timestamp="1590061207647" />
+    <state width="1358" height="386" key="GridCell.Tab.1.bottom/0.23.1440.837@0.23.1440.837" timestamp="1590360277896" />
+    <state width="991" height="265" key="GridCell.Tab.1.bottom/0.23.1440.877/1440.-11.1920.1006@1440.-11.1920.1006" timestamp="1590068272157" />
+    <state width="927" height="265" key="GridCell.Tab.1.bottom/0.23.1680.976@0.23.1680.976" timestamp="1590274653322" />
+    <state width="1358" height="386" key="GridCell.Tab.1.center" timestamp="1590360277895">
+      <screen x="0" y="23" width="1440" height="837" />
+    </state>
+    <state width="993" height="265" key="GridCell.Tab.1.center/0.23.1440.826/1440.-11.1920.1057@1440.-11.1920.1057" timestamp="1590061207646" />
+    <state width="1358" height="386" key="GridCell.Tab.1.center/0.23.1440.837@0.23.1440.837" timestamp="1590360277895" />
+    <state width="991" height="265" key="GridCell.Tab.1.center/0.23.1440.877/1440.-11.1920.1006@1440.-11.1920.1006" timestamp="1590068272156" />
+    <state width="927" height="265" key="GridCell.Tab.1.center/0.23.1680.976@0.23.1680.976" timestamp="1590274653321" />
+    <state width="1358" height="386" key="GridCell.Tab.1.left" timestamp="1590360277895">
+      <screen x="0" y="23" width="1440" height="837" />
+    </state>
+    <state width="993" height="265" key="GridCell.Tab.1.left/0.23.1440.826/1440.-11.1920.1057@1440.-11.1920.1057" timestamp="1590061207646" />
+    <state width="1358" height="386" key="GridCell.Tab.1.left/0.23.1440.837@0.23.1440.837" timestamp="1590360277895" />
+    <state width="991" height="265" key="GridCell.Tab.1.left/0.23.1440.877/1440.-11.1920.1006@1440.-11.1920.1006" timestamp="1590068272155" />
+    <state width="927" height="265" key="GridCell.Tab.1.left/0.23.1680.976@0.23.1680.976" timestamp="1590274653321" />
+    <state width="1358" height="386" key="GridCell.Tab.1.right" timestamp="1590360277896">
+      <screen x="0" y="23" width="1440" height="837" />
+    </state>
+    <state width="993" height="265" key="GridCell.Tab.1.right/0.23.1440.826/1440.-11.1920.1057@1440.-11.1920.1057" timestamp="1590061207647" />
+    <state width="1358" height="386" key="GridCell.Tab.1.right/0.23.1440.837@0.23.1440.837" timestamp="1590360277896" />
+    <state width="991" height="265" key="GridCell.Tab.1.right/0.23.1440.877/1440.-11.1920.1006@1440.-11.1920.1006" timestamp="1590068272156" />
+    <state width="927" height="265" key="GridCell.Tab.1.right/0.23.1680.976@0.23.1680.976" timestamp="1590274653322" />
+    <state x="229" y="76" key="SettingsEditor" timestamp="1590013282880">
+      <screen x="0" y="23" width="1440" height="837" />
+    </state>
+    <state x="229" y="75" key="SettingsEditor/0.23.1440.826/1440.-11.1920.1057@0.23.1440.826" timestamp="1589966783204" />
+    <state x="229" y="76" key="SettingsEditor/0.23.1440.837@0.23.1440.837" timestamp="1590013282880" />
+    <state width="630" height="382" key="XDebugger.FullValuePopup" timestamp="1590096436953">
+      <screen x="0" y="23" width="1680" height="976" />
+    </state>
+    <state width="720" height="413" key="XDebugger.FullValuePopup/0.23.1440.826/1440.-11.1920.1057@1440.-11.1920.1057" timestamp="1590059376557" />
+    <state width="630" height="382" key="XDebugger.FullValuePopup/0.23.1680.976@0.23.1680.976" timestamp="1590096436953" />
+    <state x="413" y="274" key="com.intellij.ide.util.TipDialog" timestamp="1590013143609">
+      <screen x="0" y="23" width="1440" height="837" />
+    </state>
+    <state x="413" y="274" key="com.intellij.ide.util.TipDialog/0.23.1440.837@0.23.1440.837" timestamp="1590013143609" />
+    <state x="620" y="259" width="587" height="625" key="search.everywhere.popup" timestamp="1590040487531">
+      <screen x="0" y="23" width="1680" height="976" />
+    </state>
+    <state x="2148" y="245" width="670" height="676" key="search.everywhere.popup/0.23.1440.826/1440.-11.1920.1057@1440.-11.1920.1057" timestamp="1589973538838" />
+    <state x="620" y="259" width="587" height="625" key="search.everywhere.popup/0.23.1680.976@0.23.1680.976" timestamp="1590040487531" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/web_engine/engine/SeleniumScraper.py</url>
+          <line>80</line>
+          <option name="timeStamp" value="81" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/web_engine/engine/SeleniumScraper.py</url>
+          <line>65</line>
+          <option name="timeStamp" value="82" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="action_name = action_name.strip().replace('_pre_', '')" language="Python" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/dr_web_engine$runner__2_.coverage" NAME="runner (2) Coverage Results" MODIFIED="1590360719584" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/web_engine" />
+    <SUITE FILE_PATH="coverage/LXmlEngine$runner__1_.coverage" NAME="runner (1) Coverage Results" MODIFIED="1589971151621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lxml_engine" />
+    <SUITE FILE_PATH="coverage/dr_web_engine$Nosetests_for_ConfigReaderTest_test_no_file_reader.coverage" NAME="Nosetests for ConfigReaderTest.test_no_file_reader Coverage Results" MODIFIED="1589972337890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/web_engine/test" />
+    <SUITE FILE_PATH="coverage/dr_web_engine$test.coverage" NAME="test Coverage Results" MODIFIED="1590144189329" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/web_engine/interpreter" />
+    <SUITE FILE_PATH="coverage/dr_web_engine$Nosetests_for_EngineTest_test_main_process.coverage" NAME="Nosetests for EngineTest.test_main_process Coverage Results" MODIFIED="1589972296515" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/web_engine/test" />
+    <SUITE FILE_PATH="coverage/LXmlEngine$runner.coverage" NAME="runner Coverage Results" MODIFIED="1589970576515" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lxml_enginge" />
+  </component>
+</project>

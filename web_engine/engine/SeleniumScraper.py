@@ -3,6 +3,7 @@ from web_engine.interfaces.ActionRunner import ActionRunner
 from web_engine.engine.actions.ClickAction import ClickAction
 from web_engine.engine.actions.FilterRemoveAction import FilterRemoveAction
 from web_engine.engine.config.ScraperConfig import ScraperConfig
+import geckodriver_autoinstaller
 
 from interface import implements
 import time
@@ -11,6 +12,8 @@ from urllib.parse import urljoin
 
 from selenium import webdriver
 from xvfbwrapper import Xvfb
+
+geckodriver_autoinstaller.install()
 
 
 class SeleniumScraper(implements(Scraper, ActionRunner)):
