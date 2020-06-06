@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/LXmlEngine.iml" filepath="$PROJECT_DIR$/.idea/LXmlEngine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../data-gather/.idea/data-gather.iml" filepath="$PROJECT_DIR$/../../data-gather/.idea/data-gather.iml" />
     </modules>
   </component>
 </project>

@@ -14,7 +14,7 @@ setuptools.setup(
         long_description_content_type="text/markdown",
         url="https://github.com/ylliprifti/dr-web-engine",
         packages=setuptools.find_packages(),
-        install_requires=['argparse', 'xvfbwrapper', 'selenium', 'python_interface',
+        install_requires=['request', 'argparse', 'xvfbwrapper', 'selenium', 'python_interface',
                           'lxml', 'geckodriver_autoinstaller'],
         classifiers=[
             "Programming Language :: Python :: 3",
