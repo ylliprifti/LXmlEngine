@@ -11,12 +11,16 @@ class ActionRunner(Interface):
     """
 
     @property
+    def actions(self) -> dict:
+        pass
+
+    @property
     def history(self):
         pass
 
     @interface.default
     def register(self, action_name: str, action: Action):
-        self._actions[action_name] = action
+        self.actions[action_name] = action
 
     def execute(self, action_composite: str):
         pass

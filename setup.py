@@ -5,9 +5,9 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
         name="dr-web-engine",
-        version="0.1.3.Beta",
+        version="0.2.5.0Beta",
         author="Ylli Prifti",
-        author_email="ylli@prifti.us",
+        author_email="ylli@dcs.bbk.ac.uk",
         description="Data Retrieval Web Engine - Queryable Web Scrap engine build on python based on lxml and "
                     "Selenium package and using JSON as query construct.",
         long_description=long_description,

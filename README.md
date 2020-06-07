@@ -27,7 +27,7 @@ The Python Package page can be found [here](https://pypi.org/project/dr-web-engi
 
 ## Usage
 
-To use the integrated CLI run `python3 -m webengine.runner`. This will display the following help message: 
+To use the integrated CLI run `python3 -m web_engine.runner`. This will display the following help message: 
 
 ```bash
 

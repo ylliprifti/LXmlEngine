@@ -15,6 +15,10 @@ class RequestScraper(implements(Scraper, ActionRunner)):
         self._actions = {}
         self._history = []
 
+    @property
+    def actions(self) -> dict:
+        return self._actions
+
     def get_doc(self, doc):
         """
         get the html element from the url [doc]

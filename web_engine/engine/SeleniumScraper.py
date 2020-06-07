@@ -42,6 +42,10 @@ class SeleniumScraper(implements(Scraper, ActionRunner)):
         self.register('click', click)
         self.register('remove', filter_remove)
 
+    @property
+    def actions(self) -> dict:
+        return self._actions
+
     def get_doc(self, doc):
         """
         get the html element from the url [doc]
