@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
         name="dr-web-engine",
-        version="0.2.5.0Beta",
+        version="0.2.7.2Beta",
         author="Ylli Prifti",
         author_email="ylli@dcs.bbk.ac.uk",
         description="Data Retrieval Web Engine - Queryable Web Scrap engine build on python based on lxml and "
@@ -14,7 +14,7 @@ setuptools.setup(
         long_description_content_type="text/markdown",
         url="https://github.com/ylliprifti/dr-web-engine",
         packages=setuptools.find_packages(),
-        install_requires=['request', 'argparse', 'xvfbwrapper', 'selenium', 'python_interface',
+        install_requires=['requests', 'argparse', 'xvfbwrapper', 'selenium', 'python_interface',
                           'lxml', 'geckodriver_autoinstaller'],
         classifiers=[
             "Programming Language :: Python :: 3",

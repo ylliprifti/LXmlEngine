@@ -14,6 +14,9 @@ import logging
 import json
 import sys
 
+if not sys.warnoptions:
+    import warnings
+    warnings.simplefilter("ignore")
 
 parser = argparse.ArgumentParser(description='Web Scrap Engine for semi-structured web data retrieval using JSON '
                                              'query constructs')
@@ -44,18 +47,16 @@ parser.add_argument('-lon', '--lon', type=int, nargs="?",
                     help="Longitude (not specified by default)",
                     action="store", dest="lon")
 
-parser.add_argument('-img', '--img', type=bool, nargs="?",
-                    help="Load images",
-                    action="store", dest="img")
+parser.add_argument('-img', '--img', help="Load images",
+                    action="store_true", dest="img")
 
-parser.add_argument('-l', '--log', type=bool, nargs="?",
+parser.add_argument('-l', '--log',
                     help='Set flag to True to see verbose logging output',
-                    action="store", dest="log", default=False)
+                    action="store_true", dest="log")
 
-parser.add_argument('-xvfb', '--xvfb', type=bool, nargs="?",
+parser.add_argument('-xvfb', '--xvfb',
                     help='Set flag to False to see Firefox when using Selenium engine',
-                    action="store", dest="xvfb", default=False
-                    )
+                    action="store_true", dest="xvfb")
 
 sys.setrecursionlimit(1000)
 
@@ -66,8 +67,15 @@ def main(argv):
     if args.log:
         log_level = logging.NOTSET
 
-    logging.basicConfig(level=log_level)
-    log = logging.getLogger('Engine')
+    logging.basicConfig(filename='dr-web-engine.log', level=logging.ERROR)
+    root_log = logging.getLogger()
+    root_log.handlers = []
+    root_log.addHandler(logging.FileHandler('dr-web-engine.log.1', mode='a', encoding=None, delay=False))
+
+    log = logging.getLogger(__name__)
+    log.setLevel(log_level)
+    log.handlers = []
+    log.addHandler(logging.FileHandler('dr-web-engine.log', mode='a', encoding=None, delay=False))
 
     if args.query is None:
         parser.print_help()
@@ -92,17 +100,23 @@ def main(argv):
 
     result = engine.process()
 
+    # sys.stdout.write(json.dumps(result))
+    # sys.stdout.flush()
+
     pp(result)
+
+    sys.exit(0)
+
+
     # print(json.dumps(result))
 
 
 if __name__ == "__main__":
 
     # sys.argv.append("-q")
-    # sys.argv.append("../google-search.json")
+    # sys.argv.append("../test/trader.extract.json")
 
-    # sys.argv.append("-l")
-    # sys.argv.append("true")
+    # sys.argv.append("--log")
 
     # sys.argv.append("-wh")
     # sys.argv.append("640")

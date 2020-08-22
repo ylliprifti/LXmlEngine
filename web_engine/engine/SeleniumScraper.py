@@ -30,6 +30,7 @@ class SeleniumScraper(implements(Scraper, ActionRunner)):
             self.display.start()
 
         self._driver = webdriver.Firefox(firefox_profile)
+
         self._driver.set_window_size(self.config.width.get(), self.config.height.get())
         self._driver.set_window_position(self.config.lat.get() or 0, self.config.lon.get() or 0)
         self.last_url = None
@@ -116,7 +117,8 @@ class SeleniumScraper(implements(Scraper, ActionRunner)):
         if self.driver is not None:
             try:
                 time.sleep(10)  # wait for operations to complete before closing
-                self.driver.close()
+                if hasattr(self, "_driver"):
+                    self.driver.close()
                 if self.config.xvfb.get():
                     self.display.stop()
             except Exception as ex:
