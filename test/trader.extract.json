@@ -2,20 +2,21 @@
     "_doc": "https://www.checkatrade.com/trades/WayreHouseElectricalServices",
     "result": [{
         "data": [{
-            "ld_data": "//head/script[@type=\"application/ld+json\"][1]"
-        }],
-        "reviews": [{
+            "_base_path": "//head[1]",
+            "ld_data": "//script[@type=\"application/ld+json\"][1]"
+        }]
+     }],
+    "reviews": [{
                 "_doc": "https://www.checkatrade.com/trades/WayreHouseElectricalServices/reviews",
-                "_base_path": "//div[contains(@class, 'ReviewsPage__Content')]//div[contains(@class, 'ReviewsItem__Wrapper')]",
+                "_base_path": "//div[contains(@class, 'sc-16w286i-6')]",
                 "_key": "review",
                 "_pre_remove": "//*[contains(@class,'alert-box')]",
-                "_follow": "//a[contains(@class,\"Chevrons__Wrapper\")][2]/@href",
-                "_follow_action": "//a[contains(@class,\"Chevrons__Wrapper\")][2]{click }",
-                "title": "//h3[contains(@class, 'ReviewsItem__Title')]",
+                "_follow": "//a[contains(@class, 'sc-149axd3-0')][2][not(@disabled)]/@href",
+                "_follow_action": "//a[contains(@class, 'sc-149axd3-0')][2]{click }",
+                "title": "//h3[contains(@class, 'sc-16w286i-3')]",
                 "score": "//*[name()='svg']//text()[normalize-space()]",
-                "verified": "//div[contains(@class, 'ReviewsItem__Verified')]/text()[normalize-space()]",
-                "content": "//p[contains(@class, 'ReviewsItem__P')]",
-                "review_by": "//div[contains(@class, 'ReviewsItem__Byline')]/text()[normalize-space()]"
-            }]
-     }]
+                "verified": "//div[contains(@class, 'sc-16w286i-4')]/text()[normalize-space()]",
+                "content": "//p[contains(@class, 'sc-16w286i-8')]",
+                "location": "//div[contains(@class, 'sc-16w286i-9')]/text()[normalize-space()]"
+    }]
 }

@@ -100,13 +100,14 @@ def main(argv):
 
     result = engine.process()
 
-    # sys.stdout.write(json.dumps(result))
-    # sys.stdout.flush()
+    sys.stdout.write(json.dumps(result))
+    sys.stdout.flush()
 
-    pp(result)
+    # print(json.dumps(result))
+
+    # pp(result)
 
     sys.exit(0)
-
 
     # print(json.dumps(result))
 
