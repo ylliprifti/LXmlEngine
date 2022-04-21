@@ -1,4 +1,4 @@
-lxml==4.6.3
+lxml==4.6.5
 python-interface==1.6.0
 
 requests~=2.23.0
